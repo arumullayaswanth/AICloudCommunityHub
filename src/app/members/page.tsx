@@ -25,7 +25,7 @@ export default function MembersPage() {
               return (
                 <Card key={member.id} className="bg-card border-border/50 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   {memberImage && (
-                    <div className="relative h-40 w-40 mx-auto mt-8 rounded-full overflow-hidden border-4 border-primary">
+                    <div className="relative h-48 w-48 mx-auto mt-8 rounded-full overflow-hidden border-4 border-primary">
                       <Image
                         src={memberImage.imageUrl}
                         alt={memberImage.description}

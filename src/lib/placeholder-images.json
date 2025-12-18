@@ -2,75 +2,75 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "An abstract, futuristic background with glowing blue and purple particles.",
-      "imageUrl": "https://storage.googleapis.com/aif-static/556cc443-1577-4796-a197-f418d9a26385/original.png",
-      "imageHint": "abstract futuristic"
+      "description": "AI Cloud Community Hub - Modern co-working space with developers collaborating on AI and cloud projects.",
+      "imageUrl": "/ai%20cloud-1.png",
+      "imageHint": "ai cloud community"
     },
     {
       "id": "about-community",
-      "description": "A modern co-working space with developers collaborating on AI and cloud projects.",
-      "imageUrl": "https://storage.googleapis.com/aif-static/d3435427-0474-4235-9373-105260193427/original.png",
-      "imageHint": "developers collaborating"
+      "description": "AI Cloud Community Hub - A global platform for developers, students, and professionals passionate about AI and Cloud Computing.",
+      "imageUrl": "/ai%20cloud-1.png",
+      "imageHint": "ai cloud community hub"
     },
     {
       "id": "event-1",
-      "description": "A speaker on stage at a tech conference, presenting to an engaged audience.",
-      "imageUrl": "https://images.unsplash.com/photo-1560439514-4e9645039924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0ZWNoJTIwY29uZmVyZW5jZXxlbnwwfHx8fDE3NjYwNTA5ODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "tech conference"
+      "description": "AI & Machine Learning Workshop - A hands-on workshop covering the fundamentals of AI and Machine Learning.",
+      "imageUrl": "/AI%20%26%20Machine%20Learning%20Workshop.jpg",
+      "imageHint": "ai machine learning workshop"
     },
     {
       "id": "event-2",
-      "description": "A group of people in a workshop, working on laptops and collaborating.",
-      "imageUrl": "https://images.unsplash.com/photo-1649252504196-4aca12ecc644?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3b3Jrc2hvcCUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzY1OTU5NTk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "workshop collaboration"
+      "description": "Cloud Native Conference 2024 - Join industry experts to discuss the latest trends in cloud-native technologies, DevOps, and multi-cloud architecture.",
+      "imageUrl": "/Cloud%20Native%20Conference%202024.jpg",
+      "imageHint": "cloud native conference"
     },
     {
       "id": "event-3",
-      "description": "A person coding on a laptop with a complex algorithm on the screen.",
-      "imageUrl": "https://images.unsplash.com/photo-1763568258235-f40425a94af9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhSUyMGNvZGluZ3xlbnwwfHx8fDE3NjYwNTE3MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "ai coding"
+      "description": "AI Hackathon: Build the Future - Participate in our annual hackathon to build innovative AI projects.",
+      "imageUrl": "/AI%20Hackathon%20Build%20the%20Future.jpg",
+      "imageHint": "ai hackathon build future"
     },
     {
       "id": "blog-1",
-      "description": "An abstract image representing the intersection of AI and cloud computing.",
-      "imageUrl": "https://images.unsplash.com/photo-1625427333548-c96c52a4ca5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhSUyMGNsb3VkfGVufDB8fHx8MTc2NjA1MTcyMXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "ai cloud"
+      "description": "Getting Started with AI and Cloud - A beginner's guide to integrating AI into cloud applications.",
+      "imageUrl": "/Getting%20Started%20with%20AI%20and%20Cloud.jpg",
+      "imageHint": "getting started ai cloud"
     },
     {
       "id": "blog-2",
-      "description": "A person working with data visualizations on a large screen.",
-      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYXRhJTIwdmlzdWFsaXphdGlvbnxlbnwwfHx8fDE3NjYwMjA5Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "data visualization"
+      "description": "Mastering DevOps in a Multi-Cloud World - Explore advanced DevOps strategies for managing applications across multiple cloud providers.",
+      "imageUrl": "/Mastering%20DevOps%20in%20a%20Multi-Cloud%20World.png",
+      "imageHint": "mastering devops multi-cloud"
     },
     {
       "id": "blog-3",
-      "description": "An image of a secure, modern data center.",
-      "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkYXRhJTIwY2VudGVyfGVufDB8fHx8MTc2NTkzMDIxM3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "data center"
+      "description": "The Future of AI: Secure and Scalable Solutions - A look into the future of AI, focusing on the importance of building secure and scalable systems.",
+      "imageUrl": "/The%20Future%20of%20AI%20Secure%20and%20Scalable%20Solutions.jpg",
+      "imageHint": "future ai secure scalable solutions"
     },
     {
       "id": "avatar-1",
-      "description": "A profile picture of Jane Doe.",
-      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9maWxlJTIwcGljdHVyZXxlbnwwfHx8fDE3NjU5NzE0MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "profile picture"
+      "description": "Jane Doe - AI & Cloud Expert and Workshop Leader.",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=60",
+      "imageHint": "jane doe profile"
     },
     {
       "id": "avatar-2",
-      "description": "A profile picture of John Smith.",
-      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9maWxlJTIwcGljdHVyZXxlbnwwfHx8fDE3NjU5NzE0MzF8MA&ixlibrb-4.1.0&q=80&w=1080",
-      "imageHint": "profile picture"
+      "description": "John Smith - DevOps Specialist and Multi-Cloud Architect.",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=60",
+      "imageHint": "john smith profile"
     },
     {
       "id": "avatar-3",
-      "description": "A profile picture of Alex Johnson.",
-      "imageUrl": "https://images.unsplash.com/photo-1654110455429-cf322b40a906?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9maWxlJTIwcGljdHVyZXxlbnwwfHx8fDE3NjU5NzE0MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "profile picture"
+      "description": "Alex Johnson - AI Security and Scalability Researcher.",
+      "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&auto=format&fit=crop&q=60",
+      "imageHint": "alex johnson profile"
     },
     {
       "id": "project-tagent",
-      "description": "An abstract visual representing AI agents and frameworks.",
-      "imageUrl": "https://images.unsplash.com/photo-1718227941329-94c65a782a24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhdXRvbm9tb3VzJTIwYWdlbnRzfGVufDB8fHx8MTc2NjM5ODg2OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "ai agents"
+      "description": "Tagent - An open-source framework for building and deploying AI agents.",
+      "imageUrl": "/tagent.png",
+      "imageHint": "tagent ai agents framework"
     }
   ]
 }

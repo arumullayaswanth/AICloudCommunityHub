@@ -12,7 +12,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   if (!post) {
     notFound();
   }
-  
+
   const postImage = PlaceHolderImages.find(p => p.id === post.imageId);
 
   return (
@@ -28,7 +28,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               By {post.author} on {post.date}
             </p>
             {postImage && (
-              <div className="relative h-80 w-full my-8 rounded-lg overflow-hidden">
+              <div className="relative h-96 w-full my-8 rounded-lg overflow-hidden">
                 <Image
                   src={postImage.imageUrl}
                   alt={postImage.description}

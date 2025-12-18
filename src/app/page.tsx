@@ -90,39 +90,39 @@ const HeroSection = () => {
   const heroImage = PlaceHolderImages.find(p => p.id === "hero-background");
 
   return (
-  <section id="home" className="relative w-full h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
-    {heroImage && (
-       <Image
+    <section id="home" className="relative w-full h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+      {heroImage && (
+        <Image
           src={heroImage.imageUrl}
           alt={heroImage.description}
           data-ai-hint={heroImage.imageHint}
           fill
-          className="object-cover -z-10"
+          className="object-contain -z-10"
         />
-    )}
-    <div className="absolute inset-0 bg-background/60 backdrop-blur-sm"></div>
-    <div className="container px-4 md:px-6 text-center z-10">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="font-headline text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
-          AI Cloud Community Hub
-        </h1>
-        <p className="mt-6 text-lg text-foreground/80 sm:text-xl">
-          A Global Community for AI & Cloud Enthusiasts
-        </p>
-        <p className="mt-4 max-w-2xl mx-auto text-foreground/70">
-          Learn, collaborate, and build real-world AI and Cloud solutions with developers, students, and professionals worldwide.
-        </p>
-        <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
-            <Link href="/join">Join the Community <ArrowRight className="ml-2 h-5 w-5" /></Link>
-          </Button>
-          <Button asChild size="lg" variant="outline" className="font-semibold bg-background/50 hover:bg-background/80">
-            <Link href="/events">Explore Events</Link>
-          </Button>
+      )}
+      <div className="absolute inset-0 bg-background/60 backdrop-blur-sm"></div>
+      <div className="container px-4 md:px-6 text-center z-10">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="font-headline text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
+            AI Cloud Community Hub
+          </h1>
+          <p className="mt-6 text-lg text-foreground/80 sm:text-xl">
+            A Global Community for AI & Cloud Enthusiasts
+          </p>
+          <p className="mt-4 max-w-2xl mx-auto text-foreground/70">
+            Learn, collaborate, and build real-world AI and Cloud solutions with developers, students, and professionals worldwide.
+          </p>
+          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
+              <Link href="/join">Join the Community <ArrowRight className="ml-2 h-5 w-5" /></Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="font-semibold bg-background/50 hover:bg-background/80">
+              <Link href="/events">Explore Events</Link>
+            </Button>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   )
 };
 
@@ -140,7 +140,7 @@ const AboutSection = ({ content }: { content: string }) => {
             </p>
           </div>
           {aboutImage && (
-            <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+            <div className="relative h-96 overflow-hidden rounded-xl shadow-lg">
               <Image
                 src={aboutImage.imageUrl}
                 alt={aboutImage.description}

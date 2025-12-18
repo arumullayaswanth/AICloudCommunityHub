@@ -29,7 +29,7 @@ export default function EventsPage() {
               return (
                 <Card key={event.id} className="bg-card border-border/50 overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   {eventImage && (
-                    <div className="relative h-56 w-full">
+                    <div className="relative h-96 w-full">
                       <Image
                         src={eventImage.imageUrl}
                         alt={eventImage.description}

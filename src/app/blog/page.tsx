@@ -29,7 +29,7 @@ export default function BlogPage() {
               return (
                 <Card key={post.id} className="bg-card border-border/50 overflow-hidden transform transition-all duration-300 hover:shadow-xl md:flex">
                   {postImage && (
-                    <div className="relative h-56 md:h-auto md:w-1/3">
+                    <div className="relative h-96 md:h-auto md:w-1/2">
                       <Image
                         src={postImage.imageUrl}
                         alt={postImage.description}
@@ -39,7 +39,7 @@ export default function BlogPage() {
                       />
                     </div>
                   )}
-                  <div className="md:w-2/3">
+                  <div className="md:w-1/2">
                     <CardHeader>
                       <CardTitle className="text-2xl text-foreground">{post.title}</CardTitle>
                       <p className="text-sm text-muted-foreground">

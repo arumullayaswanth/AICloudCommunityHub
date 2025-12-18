@@ -31,7 +31,7 @@ export default function ProjectsPage() {
               return (
                 <Card key={project.id} className="bg-card border-border/50 overflow-hidden transform transition-all duration-300 hover:shadow-xl md:flex">
                   {projectImage && (
-                    <div className="relative h-64 md:h-auto md:w-2/5">
+                    <div className="relative h-96 md:h-auto md:w-1/2">
                       <Image
                         src={projectImage.imageUrl}
                         alt={projectImage.description}
@@ -41,7 +41,7 @@ export default function ProjectsPage() {
                       />
                     </div>
                   )}
-                  <div className="md:w-3/5 flex flex-col justify-between">
+                  <div className="md:w-1/2 flex flex-col justify-between">
                     <CardHeader>
                       <CardTitle className="text-3xl text-foreground">{project.name}</CardTitle>
                       <div className="flex flex-wrap gap-2 mt-2">
