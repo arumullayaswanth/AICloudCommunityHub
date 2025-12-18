@@ -5,6 +5,12 @@
       "description": "Abstract image representing AI and cloud collaboration.",
       "imageUrl": "https://images.unsplash.com/photo-1684503830683-108f3e0fd03f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YWJzdHJhY3QlMjB0ZWNobm9sb2d5fGVufDB8fHx8MTc2NjA0OTI3M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "abstract technology"
+    },
+    {
+      "id": "hero-background",
+      "description": "A swirling vortex of blue and purple light on a dark background.",
+      "imageUrl": "https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHRlY2hub2xvZ3l8ZW58MHx8fHwxNzE4NzMxODgyfDA&ixlib=rb-4.1.0&q=80&w=1920",
+      "imageHint": "abstract technology"
     }
   ]
 }

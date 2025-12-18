@@ -86,34 +86,45 @@ const whyJoinData = [
   },
 ];
 
-const HeroSection = () => (
+const HeroSection = () => {
+  const heroImage = PlaceHolderImages.find(p => p.id === "hero-background");
+
+  return (
   <section id="home" className="relative w-full h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
-    <div className="absolute inset-0 -z-20 h-full w-full bg-background">
-      <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
-    </div>
-    <div className="container px-4 md:px-6 text-center">
+    {heroImage && (
+       <Image
+          src={heroImage.imageUrl}
+          alt={heroImage.description}
+          data-ai-hint={heroImage.imageHint}
+          fill
+          className="object-cover -z-10"
+        />
+    )}
+    <div className="absolute inset-0 bg-background/60 backdrop-blur-sm"></div>
+    <div className="container px-4 md:px-6 text-center z-10">
       <div className="max-w-4xl mx-auto">
         <h1 className="font-headline text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
           AI Cloud Community Hub
         </h1>
-        <p className="mt-6 text-lg text-muted-foreground sm:text-xl">
+        <p className="mt-6 text-lg text-foreground/80 sm:text-xl">
           A Global Community for AI & Cloud Enthusiasts
         </p>
-        <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+        <p className="mt-4 max-w-2xl mx-auto text-foreground/70">
           Learn, collaborate, and build real-world AI and Cloud solutions with developers, students, and professionals worldwide.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
             <Link href="#contact">Join the Community <ArrowRight className="ml-2 h-5 w-5" /></Link>
           </Button>
-          <Button asChild size="lg" variant="outline" className="font-semibold">
+          <Button asChild size="lg" variant="outline" className="font-semibold bg-background/50 hover:bg-background/80">
             <Link href="#what-we-do">Explore Events</Link>
           </Button>
         </div>
       </div>
     </div>
   </section>
-);
+  )
+};
 
 const AboutSection = ({ content }: { content: string }) => {
   const aboutImage = PlaceHolderImages.find(p => p.id === "about-community");
@@ -146,7 +157,7 @@ const AboutSection = ({ content }: { content: string }) => {
 };
 
 const WhatWeDoSection = ({ content }: { content: string }) => (
-  <section id="what-we-do" className="py-16 md:py-24 bg-secondary/30">
+  <section id="what-we-do" className="py-16 md:py-24 bg-card/50">
     <div className="container px-4 md:px-6">
       <div className="text-center">
         <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-primary">What We Do</h2>
@@ -198,7 +209,7 @@ const WhoShouldJoinSection = () => (
 );
 
 const WhyJoinSection = ({ content }: { content: string }) => (
-  <section id="why-join" className="py-16 md:py-24 bg-secondary/30">
+  <section id="why-join" className="py-16 md:py-24 bg-card/50">
     <div className="container px-4 md:px-6">
       <div className="text-center">
         <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-primary">Why Join AI Cloud Community Hub?</h2>
@@ -246,9 +257,9 @@ const CtaSection = () => (
 export default async function Home() {
   const content = await generateLandingPageContent({
     theme: "AI and Cloud technologies",
-    primaryColor: "#3B82F6",
-    backgroundColor: "#0F172A",
-    accentColor: "#10B981",
+    primaryColor: "#60A5FA",
+    backgroundColor: "#030712",
+    accentColor: "#818CF8",
   });
 
   return (
