@@ -3,3 +3,4 @@ config();
 
 import '@/ai/flows/generate-landing-page-content.ts';
 import '@/ai/flows/chatbot-flow.ts';
+import '@/ai/flows/summarize-content-flow.ts';

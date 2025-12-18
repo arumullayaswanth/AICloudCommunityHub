@@ -1,19 +1,33 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { BookOpen } from "lucide-react";
 
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { blogData } from "@/lib/blog-data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { summarizeContent } from "@/ai/flows/summarize-content-flow";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
+export default async function BlogPostPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const post = blogData.find((p) => p.slug === params.slug);
 
   if (!post) {
     notFound();
   }
 
-  const postImage = PlaceHolderImages.find(p => p.id === post.imageId);
+  const summary = await summarizeContent({ content: post.content });
+
+  const postImage = PlaceHolderImages.find((p) => p.id === post.imageId);
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -27,6 +41,21 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             <p className="mt-4 text-muted-foreground">
               By {post.author} on {post.date}
             </p>
+
+            {summary && (
+              <Card className="my-8 bg-card border-border/50">
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <BookOpen className="w-6 h-6 text-primary" />
+                  <CardTitle className="text-xl text-foreground">
+                    AI Summary
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{summary}</p>
+                </CardContent>
+              </Card>
+            )}
+
             {postImage && (
               <div className="relative h-96 w-full my-8 rounded-lg overflow-hidden">
                 <Image
