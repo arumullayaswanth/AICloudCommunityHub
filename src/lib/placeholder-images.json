@@ -2,15 +2,15 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "An abstract, futuristic background with glowing blue and purple particles.",
+      "description": "A dynamic AI-themed design with glowing particles and abstract shapes.",
       "imageUrl": "https://storage.googleapis.com/aif-static/556cc443-1577-4796-a197-f418d9a26385/original.png",
       "imageHint": "abstract futuristic"
     },
     {
       "id": "about-community",
-      "description": "A diverse group of people collaborating around a table with laptops, focusing on a project with a positive and engaging atmosphere.",
+      "description": "A modern co-working space with developers collaborating on AI and cloud projects.",
       "imageUrl": "https://storage.googleapis.com/aif-static/60f79269-58b2-4749-80d8-1095b3596765/original.png",
-      "imageHint": "community collaboration"
+      "imageHint": "developers collaborating"
     },
     {
       "id": "event-1",
@@ -21,14 +21,50 @@
     {
       "id": "event-2",
       "description": "A group of people in a workshop, working on laptops and collaborating.",
-      "imageUrl": "https://picsum.photos/seed/event2/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1649252504196-4aca12ecc644?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3b3Jrc2hvcCUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzY1OTU5NTk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "workshop collaboration"
     },
     {
       "id": "event-3",
       "description": "A person coding on a laptop with a complex algorithm on the screen.",
-      "imageUrl": "https://picsum.photos/seed/event3/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1763568258235-f40425a94af9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhaSUyMGNvZGluZ3xlbnwwfHx8fDE3NjYwNTE3MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ai coding"
+    },
+    {
+      "id": "blog-1",
+      "description": "An abstract image representing the intersection of AI and cloud computing.",
+      "imageUrl": "https://images.unsplash.com/photo-1625427333548-c96c52a4ca5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhaSUyMGNsb3VkfGVufDB8fHx8MTc2NjA1MTcyMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ai cloud"
+    },
+    {
+      "id": "blog-2",
+      "description": "A person working with data visualizations on a large screen.",
+      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYXRhJTIwdmlzdWFsaXphdGlvbnxlbnwwfHx8fDE3NjYwMjA5Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data visualization"
+    },
+    {
+      "id": "blog-3",
+      "description": "An image of a secure, modern data center.",
+      "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkYXRhJTIwY2VudGVyfGVufDB8fHx8MTc2NTkzMDIxM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data center"
+    },
+    {
+      "id": "avatar-1",
+      "description": "A profile picture of Jane Doe.",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9maWxlJTIwcGljdHVyZXxlbnwwfHx8fDE3NjU5NzE0MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "profile picture"
+    },
+    {
+      "id": "avatar-2",
+      "description": "A profile picture of John Smith.",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9maWxlJTIwcGljdHVyZXxlbnwwfHx8fDE3NjU5NzE0MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "profile picture"
+    },
+    {
+      "id": "avatar-3",
+      "description": "A profile picture of Alex Johnson.",
+      "imageUrl": "https://images.unsplash.com/photo-1654110455429-cf322b40a906?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9maWxlJTIwcGljdHVyZXxlbnwwfHx8fDE3NjU5NzE0MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "profile picture"
     }
   ]
 }
