@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import { Github, ArrowRight } from "lucide-react";
@@ -25,13 +24,13 @@ export default function ProjectsPage() {
               Discover and contribute to open-source projects built by the AI Cloud Community.
             </p>
           </div>
-          <div className="max-w-4xl mx-auto">
+          <div className="grid gap-12">
             {projectsData.map((project) => {
               const projectImage = PlaceHolderImages.find(p => p.id === project.imageId);
               return (
-                <Card key={project.id} className="bg-card border-border/50 overflow-hidden transform transition-all duration-300 hover:shadow-xl md:flex">
-                  {projectImage && (
-                    <div className="relative h-96 md:h-auto md:w-1/2">
+                <Card key={project.id} className="bg-card border-border/50 overflow-hidden transform transition-all duration-300 hover:shadow-xl md:grid md:grid-cols-2">
+                  <div className="relative h-80 md:h-full">
+                    {projectImage && (
                       <Image
                         src={projectImage.imageUrl}
                         alt={projectImage.description}
@@ -39,21 +38,19 @@ export default function ProjectsPage() {
                         fill
                         className="object-cover"
                       />
-                    </div>
-                  )}
-                  <div className="md:w-1/2 flex flex-col justify-between">
-                    <CardHeader>
-                      <CardTitle className="text-3xl text-foreground">{project.name}</CardTitle>
-                      <div className="flex flex-wrap gap-2 mt-2">
+                    )}
+                  </div>
+                  <div className="flex flex-col justify-between p-6">
+                    <div>
+                      <div className="flex flex-wrap gap-2 mb-2">
                         {project.tags.map(tag => (
                           <Badge key={tag} variant="secondary">{tag}</Badge>
                         ))}
                       </div>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground text-lg">{project.longDescription}</p>
-                    </CardContent>
-                    <div className="p-6 pt-0">
+                      <CardTitle className="text-3xl text-foreground mb-4">{project.name}</CardTitle>
+                      <p className="text-muted-foreground text-lg mb-6">{project.longDescription}</p>
+                    </div>
+                    <div className="mt-auto">
                       <Button asChild>
                         <Link href={project.url} target="_blank" rel="noopener noreferrer">
                           <Github className="mr-2 h-4 w-4" />

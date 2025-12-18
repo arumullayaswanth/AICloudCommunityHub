@@ -14,6 +14,7 @@ import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { chat } from '@/ai/flows/chatbot-flow';
+import { cn } from '@/lib/utils';
 
 type Message = {
   role: 'user' | 'model';
@@ -81,74 +82,77 @@ export function Chatbot() {
         </Button>
       </div>
 
-      {isOpen && (
-        <Card className="fixed bottom-24 right-4 z-50 w-full max-w-sm flex flex-col shadow-xl border-border/50">
-          <CardHeader className="flex flex-row items-center justify-between">
-            <div className='flex items-center gap-3'>
-              <Avatar>
-                <AvatarFallback>AI</AvatarFallback>
-              </Avatar>
-              <CardTitle className="text-xl">AI Assistant</CardTitle>
-            </div>
-          </CardHeader>
-          <ScrollArea className="h-96 flex-grow p-4" ref={scrollAreaRef}>
-            <div className="space-y-4">
-              {messages.map((message, index) => (
+      <Card
+        className={cn(
+          "fixed bottom-24 right-4 z-50 w-[calc(100vw-2rem)] max-w-sm flex flex-col shadow-xl border-border/50 transition-all duration-300",
+          isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+        )}
+      >
+        <CardHeader className="flex flex-row items-center justify-between">
+          <div className='flex items-center gap-3'>
+            <Avatar>
+              <AvatarFallback>AI</AvatarFallback>
+            </Avatar>
+            <CardTitle className="text-xl">AI Assistant</CardTitle>
+          </div>
+        </CardHeader>
+        <ScrollArea className="h-96 flex-grow p-4" ref={scrollAreaRef}>
+          <div className="space-y-4">
+            {messages.map((message, index) => (
+              <div
+                key={index}
+                className={`flex gap-3 text-sm ${
+                  message.role === 'user' ? 'justify-end' : ''
+                }`}
+              >
+                {message.role === 'model' && (
+                  <Avatar className="w-8 h-8">
+                     <AvatarFallback>AI</AvatarFallback>
+                  </Avatar>
+                )}
                 <div
-                  key={index}
-                  className={`flex gap-3 text-sm ${
-                    message.role === 'user' ? 'justify-end' : ''
+                  className={`rounded-lg px-3 py-2 max-w-[80%] ${
+                    message.role === 'user'
+                      ? 'bg-primary text-primary-foreground'
+                      : 'bg-muted'
                   }`}
                 >
-                  {message.role === 'model' && (
-                    <Avatar className="w-8 h-8">
-                       <AvatarFallback>AI</AvatarFallback>
-                    </Avatar>
-                  )}
-                  <div
-                    className={`rounded-lg px-3 py-2 ${
-                      message.role === 'user'
-                        ? 'bg-primary text-primary-foreground'
-                        : 'bg-muted'
-                    }`}
-                  >
-                    {message.content}
-                  </div>
-                   {message.role === 'user' && (
-                    <Avatar className="w-8 h-8">
-                      <AvatarFallback>U</AvatarFallback>
-                    </Avatar>
-                  )}
+                  {message.content}
                 </div>
-              ))}
-               {isLoading && (
-                <div className="flex gap-3 text-sm">
+                 {message.role === 'user' && (
                   <Avatar className="w-8 h-8">
-                    <AvatarFallback>AI</AvatarFallback>
+                    <AvatarFallback>U</AvatarFallback>
                   </Avatar>
-                  <div className="rounded-lg px-3 py-2 bg-muted flex items-center">
-                    <Loader className="w-5 h-5 animate-spin" />
-                  </div>
+                )}
+              </div>
+            ))}
+             {isLoading && (
+              <div className="flex gap-3 text-sm">
+                <Avatar className="w-8 h-8">
+                  <AvatarFallback>AI</AvatarFallback>
+                </Avatar>
+                <div className="rounded-lg px-3 py-2 bg-muted flex items-center">
+                  <Loader className="w-5 h-5 animate-spin" />
                 </div>
-              )}
-            </div>
-          </ScrollArea>
-          <CardFooter className="p-4 border-t">
-            <div className="flex w-full items-center gap-2">
-              <Input
-                placeholder="Type a message..."
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-                disabled={isLoading}
-              />
-              <Button onClick={handleSend} disabled={isLoading}>
-                <Send className="h-4 w-4" />
-              </Button>
-            </div>
-          </CardFooter>
-        </Card>
-      )}
+              </div>
+            )}
+          </div>
+        </ScrollArea>
+        <CardFooter className="p-4 border-t">
+          <div className="flex w-full items-center gap-2">
+            <Input
+              placeholder="Type a message..."
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+              disabled={isLoading}
+            />
+            <Button onClick={handleSend} disabled={isLoading}>
+              <Send className="h-4 w-4" />
+            </Button>
+          </div>
+        </CardFooter>
+      </Card>
     </>
   );
 }

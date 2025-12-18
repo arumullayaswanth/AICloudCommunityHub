@@ -19,7 +19,7 @@ export default function MembersPage() {
               Meet the talented individuals driving our community forward.
             </p>
           </div>
-          <div className="grid gap-8 lg:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1">
+          <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {membersData.map((member) => {
               const memberImage = PlaceHolderImages.find(p => p.id === member.imageId);
               return (

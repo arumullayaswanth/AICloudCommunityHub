@@ -23,13 +23,13 @@ export default function EventsPage() {
               Join our upcoming workshops, webinars, and meetups.
             </p>
           </div>
-          <div className="grid gap-8 lg:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1">
+          <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {eventsData.map((event) => {
               const eventImage = PlaceHolderImages.find(p => p.id === event.imageId);
               return (
-                <Card key={event.id} className="bg-card border-border/50 overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <Card key={event.id} className="bg-card border-border/50 overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl flex flex-col">
                   {eventImage && (
-                    <div className="relative h-96 w-full">
+                    <div className="relative h-64 w-full">
                       <Image
                         src={eventImage.imageUrl}
                         alt={eventImage.description}
@@ -42,7 +42,7 @@ export default function EventsPage() {
                   <CardHeader>
                     <CardTitle className="text-xl text-foreground">{event.title}</CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="flex-grow">
                     <p className="text-muted-foreground line-clamp-3">{event.description}</p>
                     <div className="flex items-center text-muted-foreground mt-4 text-sm">
                       <Calendar className="mr-2 h-4 w-4" />
@@ -53,7 +53,7 @@ export default function EventsPage() {
                       <span>{event.location}</span>
                     </div>
                   </CardContent>
-                  <CardFooter className="bg-card/50 pt-4">
+                  <CardFooter className="bg-card/50 pt-4 mt-auto">
                     <Button asChild variant="default" className="w-full">
                       <Link href="#">
                         Register Now <ArrowRight className="ml-2 h-4 w-4" />

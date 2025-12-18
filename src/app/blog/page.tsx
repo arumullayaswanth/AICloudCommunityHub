@@ -23,13 +23,13 @@ export default function BlogPage() {
               Insights, tutorials, and news from the AI Cloud Community.
             </p>
           </div>
-          <div className="grid gap-8 lg:grid-cols-1">
+          <div className="grid gap-8 grid-cols-1">
             {blogData.map((post) => {
               const postImage = PlaceHolderImages.find(p => p.id === post.imageId);
               return (
                 <Card key={post.id} className="bg-card border-border/50 overflow-hidden transform transition-all duration-300 hover:shadow-xl md:flex">
                   {postImage && (
-                    <div className="relative h-96 md:h-auto md:w-1/2">
+                    <div className="relative h-64 md:h-auto md:w-1/3">
                       <Image
                         src={postImage.imageUrl}
                         alt={postImage.description}
@@ -39,7 +39,7 @@ export default function BlogPage() {
                       />
                     </div>
                   )}
-                  <div className="md:w-1/2">
+                  <div className="md:w-2/3">
                     <CardHeader>
                       <CardTitle className="text-2xl text-foreground">{post.title}</CardTitle>
                       <p className="text-sm text-muted-foreground">
