@@ -59,7 +59,7 @@ export function Footer() {
                 <Link href="#" aria-label="GitHub">
                   <Github className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
                 </Link>
-                <Link href="#" aria-label="LinkedIn">
+                <Link href="https://www.linkedin.com/company/aicloudcommunityhub/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <Linkedin className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
                 </Link>
                 <Link href="#" aria-label="Discord">
