@@ -5,7 +5,7 @@ function Logo() {
   return (
     <Link
       href="#home"
-      className="text-xl font-bold tracking-tighter text-foreground transition-colors hover:text-primary"
+      className="text-2xl font-bold tracking-tighter text-foreground transition-colors hover:text-primary"
     >
       AI Cloud Community Hub
     </Link>

@@ -87,26 +87,26 @@ const whyJoinData = [
 ];
 
 const HeroSection = () => (
-  <section id="home" className="relative w-full h-[90svh] min-h-[700px] flex items-center justify-center overflow-hidden">
-    <div className="absolute inset-0 -z-10 h-full w-full bg-background">
-      <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,hsl(var(--background))_40%,hsl(var(--primary))_100%)]"></div>
+  <section id="home" className="relative w-full h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+    <div className="absolute inset-0 -z-20 h-full w-full bg-background">
+      <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
     </div>
     <div className="container px-4 md:px-6 text-center">
       <div className="max-w-4xl mx-auto">
-        <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
+        <h1 className="font-headline text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
           AI Cloud Community Hub
         </h1>
-        <p className="mt-4 text-lg text-muted-foreground sm:text-xl">
+        <p className="mt-6 text-lg text-muted-foreground sm:text-xl">
           A Global Community for AI & Cloud Enthusiasts
         </p>
         <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
           Learn, collaborate, and build real-world AI and Cloud solutions with developers, students, and professionals worldwide.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
             <Link href="#contact">Join the Community <ArrowRight className="ml-2 h-5 w-5" /></Link>
           </Button>
-          <Button asChild size="lg" variant="outline">
+          <Button asChild size="lg" variant="outline" className="font-semibold">
             <Link href="#what-we-do">Explore Events</Link>
           </Button>
         </div>
@@ -119,17 +119,17 @@ const AboutSection = ({ content }: { content: string }) => {
   const aboutImage = PlaceHolderImages.find(p => p.id === "about-community");
 
   return (
-    <section id="about" className="py-16 md:py-24">
+    <section id="about" className="py-16 md:py-24 bg-background">
       <div className="container px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">About AI Cloud Community Hub</h2>
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-primary">About AI Cloud Community Hub</h2>
             <p className="mt-4 text-muted-foreground md:text-lg">
               {content}
             </p>
           </div>
           {aboutImage && (
-            <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
               <Image
                 src={aboutImage.imageUrl}
                 alt={aboutImage.description}
@@ -146,20 +146,20 @@ const AboutSection = ({ content }: { content: string }) => {
 };
 
 const WhatWeDoSection = ({ content }: { content: string }) => (
-  <section id="what-we-do" className="py-16 md:py-24 bg-muted/20">
+  <section id="what-we-do" className="py-16 md:py-24 bg-secondary/30">
     <div className="container px-4 md:px-6">
       <div className="text-center">
-        <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">What We Do</h2>
+        <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-primary">What We Do</h2>
         <p className="mt-4 max-w-3xl mx-auto text-muted-foreground md:text-lg">
           {content}
         </p>
       </div>
       <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {whatWeDoData.map((item) => (
-          <Card key={item.title} className="group hover:border-primary transition-all duration-300 transform hover:-translate-y-2">
+          <Card key={item.title} className="bg-card border-border/50 group hover:border-primary transition-all duration-300 transform hover:-translate-y-2">
             <CardHeader className="flex flex-row items-center gap-4">
               <item.icon className="h-8 w-8 text-primary" />
-              <CardTitle>{item.title}</CardTitle>
+              <CardTitle className="text-foreground">{item.title}</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">{item.description}</p>
@@ -172,22 +172,22 @@ const WhatWeDoSection = ({ content }: { content: string }) => (
 );
 
 const WhoShouldJoinSection = () => (
-  <section id="who-should-join" className="py-16 md:py-24">
+  <section id="who-should-join" className="py-16 md:py-24 bg-background">
     <div className="container px-4 md:px-6">
       <div className="text-center">
-        <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Who Should Join?</h2>
+        <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-primary">Who Should Join?</h2>
         <p className="mt-4 max-w-3xl mx-auto text-muted-foreground md:text-lg">
           Our community is a diverse group of individuals passionate about technology. You'll fit right in if you are:
         </p>
       </div>
       <div className="mt-12 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         {whoShouldJoinData.map((item) => (
-          <div key={item.title} className="flex items-start gap-4">
+          <div key={item.title} className="flex items-start gap-4 p-6 rounded-lg bg-card border-border/50">
             <div className="bg-primary/10 p-3 rounded-full">
               <item.icon className="h-6 w-6 text-primary" />
             </div>
             <div>
-              <h3 className="font-semibold text-lg">{item.title}</h3>
+              <h3 className="font-semibold text-lg text-foreground">{item.title}</h3>
               <p className="text-muted-foreground">{item.description}</p>
             </div>
           </div>
@@ -198,23 +198,23 @@ const WhoShouldJoinSection = () => (
 );
 
 const WhyJoinSection = ({ content }: { content: string }) => (
-  <section id="why-join" className="py-16 md:py-24 bg-muted/20">
+  <section id="why-join" className="py-16 md:py-24 bg-secondary/30">
     <div className="container px-4 md:px-6">
       <div className="text-center">
-        <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Why Join AI Cloud Community Hub?</h2>
+        <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-primary">Why Join AI Cloud Community Hub?</h2>
         <p className="mt-4 max-w-3xl mx-auto text-muted-foreground md:text-lg">
           {content}
         </p>
       </div>
       <div className="mt-12 grid sm:grid-cols-1 md:grid-cols-3 gap-6">
         {whyJoinData.map((item) => (
-          <Card key={item.title} className="text-center p-6">
+          <Card key={item.title} className="text-center p-6 bg-card border-border/50">
             <div className="flex justify-center mb-4">
               <div className="bg-primary/10 p-4 rounded-full">
                 <item.icon className="h-8 w-8 text-primary" />
               </div>
             </div>
-            <h3 className="font-semibold text-xl">{item.title}</h3>
+            <h3 className="font-semibold text-xl text-foreground">{item.title}</h3>
             <p className="mt-2 text-muted-foreground">{item.description}</p>
           </Card>
         ))}
@@ -224,9 +224,9 @@ const WhyJoinSection = ({ content }: { content: string }) => (
 );
 
 const CtaSection = () => (
-  <section className="py-20 md:py-32">
+  <section className="py-20 md:py-32 bg-background">
     <div className="container px-4 md:px-6">
-      <div className="rounded-2xl bg-gradient-to-r from-primary via-blue-500 to-cyan-500 p-8 md:p-16 text-center">
+      <div className="rounded-2xl bg-gradient-to-r from-primary via-blue-500 to-cyan-400 p-8 md:p-16 text-center shadow-lg">
         <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-primary-foreground">
           Ready to grow your AI & Cloud journey?
         </h2>
@@ -234,7 +234,7 @@ const CtaSection = () => (
           Become a part of our thriving community today and unlock a world of learning, collaboration, and growth.
         </p>
         <div className="mt-8">
-          <Button asChild size="lg" variant="secondary" className="bg-background text-foreground hover:bg-background/90">
+          <Button asChild size="lg" variant="secondary" className="bg-background text-foreground hover:bg-background/90 font-semibold">
             <Link href="#contact">Join AI Cloud Community Hub <ArrowRight className="ml-2 h-5 w-5" /></Link>
           </Button>
         </div>
@@ -243,17 +243,16 @@ const CtaSection = () => (
   </section>
 );
 
-
 export default async function Home() {
   const content = await generateLandingPageContent({
     theme: "AI and Cloud technologies",
-    primaryColor: "#3498DB",
-    backgroundColor: "#2C3E50",
-    accentColor: "#A7D1AB",
+    primaryColor: "#3B82F6",
+    backgroundColor: "#0F172A",
+    accentColor: "#10B981",
   });
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-background">
       <Header />
       <main className="flex-1">
         <HeroSection />
