@@ -34,19 +34,7 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isClient, setIsClient] = useState(false);
   const pathname = usePathname();
-
-  const navLinks = navLinksData.map(link => {
-    if (pathname === "/" && link.href.startsWith("/#")) {
-      return { ...link, href: link.href.substring(1) };
-    }
-    if (pathname === "/" && link.href === "/") {
-      return { ...link, href: "#home" };
-    }
-    if(pathname !== "/" && link.href.startsWith("/#")){
-      return { ...link, href: `/${link.href}` };
-    }
-    return link;
-  });
+  const [navLinks, setNavLinks] = useState(navLinksData);
 
   useEffect(() => {
     setIsClient(true);
@@ -54,8 +42,23 @@ export function Header() {
       setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
+
+    const updatedNavLinks = navLinksData.map(link => {
+      if (pathname === "/" && link.href.startsWith("/#")) {
+        return { ...link, href: link.href.substring(1) };
+      }
+      if (pathname === "/" && link.href === "/") {
+        return { ...link, href: "#home" };
+      }
+      if(pathname !== "/" && link.href.startsWith("/#")){
+        return { ...link, href: `/${link.href}` };
+      }
+      return link;
+    });
+    setNavLinks(updatedNavLinks);
+    
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
 
   return (
     <header
