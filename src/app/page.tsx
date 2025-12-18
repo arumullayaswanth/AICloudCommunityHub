@@ -257,9 +257,9 @@ const CtaSection = () => (
 export default async function Home() {
   const content = await generateLandingPageContent({
     theme: "AI and Cloud technologies",
-    primaryColor: "hsl(217 91% 60%)",
-    backgroundColor: "hsl(222 84% 4%)",
-    accentColor: "hsl(217 33% 17%)",
+    primaryColor: "hsl(260 90% 60%)",
+    backgroundColor: "hsl(240 10% 4%)",
+    accentColor: "hsl(300 90% 70%)",
   });
 
   return (
