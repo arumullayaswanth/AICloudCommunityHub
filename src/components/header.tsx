@@ -9,14 +9,12 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navLinksData = [
-  { href: "/", label: "Home" },
   { href: "/events", label: "Events" },
   { href: "/blog", label: "Blog" },
   { href: "/members", label: "Members" },
+  { href: "/projects", label: "Projects" },
   { href: "/resources", label: "Resources" },
   { href: "/forum", label: "Forum" },
-  { href: "/join", label: "Join" },
-  { href: "/#contact", label: "Contact" },
 ];
 
 function Logo() {
@@ -78,6 +76,9 @@ export function Header() {
               {link.label}
             </Link>
           ))}
+          <Button asChild>
+            <Link href="/join">Join Now</Link>
+          </Button>
         </nav>
         <div className="md:hidden">
           {isClient && (
@@ -110,6 +111,9 @@ export function Header() {
                         {link.label}
                       </Link>
                     ))}
+                     <Button asChild className="mt-4">
+                      <Link href="/join">Join Now</Link>
+                    </Button>
                   </nav>
                 </div>
               </SheetContent>

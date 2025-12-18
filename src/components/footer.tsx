@@ -30,28 +30,24 @@ export function Footer() {
           </div>
           <div className="md:col-span-1 lg:col-span-2 grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="font-semibold text-foreground mb-4">Quick Links</h3>
+              <h3 className="font-semibold text-foreground mb-4">Community</h3>
               <nav className="flex flex-col gap-2">
                 <Link href="/events" className="text-muted-foreground hover:text-primary">Events</Link>
                 <Link href="/blog" className="text-muted-foreground hover:text-primary">Blog</Link>
                 <Link href="/forum" className="text-muted-foreground hover:text-primary">Forum</Link>
-                <Link href="/join" className="text-muted-foreground hover:text-primary">Join</Link>
+                <Link href="/members" className="text-muted-foreground hover:text-primary">Members</Link>
               </nav>
             </div>
             <div>
-              <h3 className="font-semibold text-foreground mb-4">Community</h3>
+              <h3 className="font-semibold text-foreground mb-4">Projects</h3>
               <nav className="flex flex-col gap-2">
-                <Link href="/members" className="text-muted-foreground hover:text-primary">Members</Link>
-                <Link href="/#who-should-join" className="text-muted-foreground hover:text-primary">Who Should Join</Link>
-                <Link href="/#why-join" className="text-muted-foreground hover:text-primary">Why Join</Link>
+                <Link href="/projects" className="text-muted-foreground hover:text-primary">Open Source</Link>
               </nav>
             </div>
             <div>
               <h3 className="font-semibold text-foreground mb-4">Resources</h3>
               <nav className="flex flex-col gap-2">
                 <Link href="/resources" className="text-muted-foreground hover:text-primary">Resource Library</Link>
-                <Link href="/#what-we-do" className="text-muted-foreground hover:text-primary">Workshops</Link>
-                <Link href="#" className="text-muted-foreground hover:text-primary">Projects</Link>
               </nav>
             </div>
             <div>
