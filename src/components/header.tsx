@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -20,7 +20,7 @@ function Logo() {
   return (
     <Link
       href="#home"
-      className="text-2xl font-bold tracking-tighter text-foreground transition-colors hover:text-primary"
+      className="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300"
     >
       AI Cloud Community Hub
     </Link>
@@ -30,10 +30,12 @@ function Logo() {
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -43,51 +45,59 @@ export function Header() {
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border/50"
+          ? "bg-gray-900/80 backdrop-blur-lg border-b border-gray-700/50"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Logo />
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              className="text-sm font-medium text-gray-300 transition-colors hover:text-cyan-300"
             >
               {link.label}
             </Link>
           ))}
         </nav>
         <div className="md:hidden">
-          <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Open menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background">
-              <div className="p-4">
-                <div className="mb-8">
-                  <Logo />
+          {isClient && (
+            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6 text-gray-300" />
+                  <span className="sr-only">Open menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] bg-gray-900 border-l border-gray-700/50">
+                <div className="p-6">
+                  <div className="flex justify-between items-center mb-10">
+                    <Logo />
+                    <SheetTrigger asChild>
+                      <Button variant="ghost" size="icon">
+                        <X className="h-6 w-6 text-gray-300" />
+                        <span className="sr-only">Close menu</span>
+                      </Button>
+                    </SheetTrigger>
+                  </div>
+                  <nav className="flex flex-col gap-6">
+                    {navLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="text-lg font-medium text-gray-200 transition-colors hover:text-cyan-300"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </nav>
                 </div>
-                <nav className="flex flex-col gap-6">
-                  {navLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="text-lg font-medium text-foreground transition-colors hover:text-primary"
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
-                </nav>
-              </div>
-            </SheetContent>
-          </Sheet>
+              </SheetContent>
+            </Sheet>
+          )}
         </div>
       </div>
     </header>
