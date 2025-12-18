@@ -9,7 +9,7 @@
     {
       "id": "about-community",
       "description": "A modern co-working space with developers collaborating on AI and cloud projects.",
-      "imageUrl": "https://storage.googleapis.com/aif-static/60f79269-58b2-4749-80d8-1095b3596765/original.png",
+      "imageUrl": "https://storage.googleapis.com/aif-static/7761d45f-758c-4573-8994-4a415a774641/original.png",
       "imageHint": "developers collaborating"
     },
     {
@@ -57,13 +57,13 @@
     {
       "id": "avatar-2",
       "description": "A profile picture of John Smith.",
-      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9maWxlJTIwcGljdHVyZXxlbnwwfHx8fDE3NjU5NzE0MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9maWxlJTIwcGljdHVyZXxlbnwwfHx8fDE3NjU5NzE0MzF8MA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "profile picture"
     },
     {
       "id": "avatar-3",
       "description": "A profile picture of Alex Johnson.",
-      "imageUrl": "https://images.unsplash.com/photo-1654110455429-cf322b40a906?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9maWxlJTIwcGljdHVyZXxlbnwwfHx8fDE3NjU5NzE0MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1654110455429-cf322b40a906?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9maWxlJTIwcGljdHVyZXxlbnwwfHx8fDE3NjU5NzE0MzF8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "profile picture"
     },
     {
