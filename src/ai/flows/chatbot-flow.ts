@@ -7,7 +7,7 @@
  * - ChatbotOutput - The return type for the chat function.
  */
 
-import { ai } from '@/ai/genkit';
+import { ai, googleAI } from '@/ai/genkit';
 import { z } from 'genkit';
 import {
   getBlogPosts,
@@ -16,7 +16,7 @@ import {
   getProjects,
   getResources,
 } from '../tools/community-data-tool';
-import { googleAI } from '@genkit-ai/google-genai';
+
 
 const ChatbotInputSchema = z.object({
   history: z.array(z.object({
@@ -43,7 +43,7 @@ const chatbotFlow = ai.defineFlow(
     const { history, prompt } = input;
 
     const llmResponse = await ai.generate({
-      model: googleAI('gemini-1.5-flash'),
+      model: googleAI.model('gemini-1.5-flash'),
       tools: [
         getBlogPosts,
         getEvents,

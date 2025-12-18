@@ -1,5 +1,5 @@
 import {genkit} from 'genkit';
-import {googleAI} from '@genkit-ai/google-genai';
+import {googleAI as googleAIPlugin} from '@genkit-ai/google-genai';
 import {dev} from "node:os";
 
 if (!process.env.GEMINI_API_KEY) {
@@ -9,10 +9,12 @@ if (!process.env.GEMINI_API_KEY) {
     console.warn("GEMINI_API_KEY is not set, using a dummy key");
 }
 
+export const googleAI = googleAIPlugin({
+  apiKey: process.env.GEMINI_API_KEY || 'dummy-key',
+});
+
 export const ai = genkit({
   plugins: [
-    googleAI({
-      apiKey: process.env.GEMINI_API_KEY || 'dummy-key',
-    }),
+    googleAI,
   ],
 });
