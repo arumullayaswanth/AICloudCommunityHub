@@ -114,7 +114,7 @@ const HeroSection = () => {
         </p>
         <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
-            <Link href="#contact">Join the Community <ArrowRight className="ml-2 h-5 w-5" /></Link>
+            <Link href="/join">Join the Community <ArrowRight className="ml-2 h-5 w-5" /></Link>
           </Button>
           <Button asChild size="lg" variant="outline" className="font-semibold bg-background/50 hover:bg-background/80">
             <Link href="/events">Explore Events</Link>
@@ -246,7 +246,7 @@ const CtaSection = () => (
         </p>
         <div className="mt-8">
           <Button asChild size="lg" variant="secondary" className="bg-background text-foreground hover:bg-background/90 font-semibold">
-            <Link href="#contact">Join AI Cloud Community Hub <ArrowRight className="ml-2 h-5 w-5" /></Link>
+            <Link href="/join">Join AI Cloud Community Hub <ArrowRight className="ml-2 h-5 w-5" /></Link>
           </Button>
         </div>
       </div>

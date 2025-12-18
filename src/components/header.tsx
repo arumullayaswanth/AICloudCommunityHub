@@ -11,6 +11,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 const navLinksData = [
   { href: "/", label: "Home" },
   { href: "/events", label: "Events" },
+  { href: "/join", label: "Join" },
   { href: "/#contact", label: "Contact" },
 ];
 
@@ -37,6 +38,9 @@ export function Header() {
     }
     if (pathname === "/" && link.href === "/") {
       return { ...link, href: "#home" };
+    }
+    if(pathname !== "/" && link.href.startsWith("/#")){
+      return { ...link, href: `/${link.href}` };
     }
     return link;
   });
