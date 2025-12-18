@@ -2,24 +2,26 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
-const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#what-we-do", label: "What We Do" },
-  { href: "#who-should-join", label: "Who Should Join" },
-  { href: "#why-join", label: "Why Join" },
-  { href: "#contact", label: "Contact" },
+const navLinksData = [
+  { href: "/", label: "Home" },
+  { href: "/#about", label: "About" },
+  { href: "/#what-we-do", label: "What We Do" },
+  { href: "/#who-should-join", label: "Who Should Join" },
+  { href: "/#why-join", label: "Why Join" },
+  { href: "/events", label: "Events" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 function Logo() {
   return (
     <Link
-      href="#home"
+      href="/"
       className="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300"
     >
       AI Cloud Community Hub
@@ -31,6 +33,17 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isClient, setIsClient] = useState(false);
+  const pathname = usePathname();
+
+  const navLinks = navLinksData.map(link => {
+    if (pathname === "/" && link.href.startsWith("/#")) {
+      return { ...link, href: link.href.substring(1) };
+    }
+    if (pathname === "/" && link.href === "/") {
+      return { ...link, href: "#home" };
+    }
+    return link;
+  });
 
   useEffect(() => {
     setIsClient(true);

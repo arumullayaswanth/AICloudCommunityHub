@@ -4,7 +4,7 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 function Logo() {
   return (
     <Link
-      href="#home"
+      href="/"
       className="text-2xl font-bold tracking-tighter text-foreground transition-colors hover:text-primary"
     >
       AI Cloud Community Hub
@@ -32,7 +32,7 @@ export function Footer() {
             <div>
               <h3 className="font-semibold text-foreground mb-4">Community</h3>
               <nav className="flex flex-col gap-2">
-                <Link href="#" className="text-muted-foreground hover:text-primary">Events</Link>
+                <Link href="/events" className="text-muted-foreground hover:text-primary">Events</Link>
                 <Link href="#" className="text-muted-foreground hover:text-primary">Blog</Link>
                 <Link href="#" className="text-muted-foreground hover:text-primary">Forum</Link>
               </nav>
