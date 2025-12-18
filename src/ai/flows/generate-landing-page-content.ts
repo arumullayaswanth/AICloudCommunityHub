@@ -34,6 +34,7 @@ const prompt = ai.definePrompt({
   name: 'generateLandingPageContentPrompt',
   input: {schema: LandingPageContentInputSchema},
   output: {schema: LandingPageContentOutputSchema},
+  model: 'gemini-1.5-flash',
   prompt: `You are an expert content writer for community landing pages.
 
 You will generate content for three sections of the landing page: About, What We Do, and Why Join.
