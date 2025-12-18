@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/lib/utils";
+import { Chatbot } from "@/components/chatbot";
 
 export const metadata: Metadata = {
   title: "AI Cloud Community Hub",
@@ -26,6 +27,7 @@ export default function RootLayout({
         )}
       >
         {children}
+        <Chatbot />
         <Toaster />
       </body>
     </html>
