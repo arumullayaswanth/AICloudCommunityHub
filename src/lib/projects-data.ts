@@ -5,6 +5,7 @@ export type Project = {
   description: string;
   longDescription: string;
   url: string;
+  websiteUrl?: string;
   tags: string[];
   imageId: string;
 };
@@ -16,6 +17,7 @@ export const projectsData: Project[] = [
     description: "An open-source framework for building and deploying AI agents.",
     longDescription: "Tagent is a community-driven open-source project focused on creating a flexible and powerful framework for building, training, and deploying autonomous AI agents. Our goal is to make it easier for developers to create sophisticated agents that can perform complex tasks.",
     url: "https://github.com/google/tagent",
+    websiteUrl: "https://google.github.io/tagent/",
     tags: ["Open Source", "AI", "Agents", "Framework"],
     imageId: "project-tagent",
   },

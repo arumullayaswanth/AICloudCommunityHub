@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Github, ArrowRight } from "lucide-react";
+import { Github, ArrowRight, ExternalLink } from "lucide-react";
 
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -50,7 +50,7 @@ export default function ProjectsPage() {
                       <CardTitle className="text-3xl text-foreground mb-4">{project.name}</CardTitle>
                       <p className="text-muted-foreground text-lg mb-6">{project.longDescription}</p>
                     </div>
-                    <div className="mt-auto">
+                    <div className="mt-auto flex items-center gap-4">
                       <Button asChild>
                         <Link href={project.url} target="_blank" rel="noopener noreferrer">
                           <Github className="mr-2 h-4 w-4" />
@@ -58,6 +58,14 @@ export default function ProjectsPage() {
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>
+                      {project.websiteUrl && (
+                        <Button asChild variant="outline">
+                          <Link href={project.websiteUrl} target="_blank" rel="noopener noreferrer">
+                            View Website
+                            <ExternalLink className="ml-2 h-4 w-4" />
+                          </Link>
+                        </Button>
+                      )}
                     </div>
                   </div>
                 </Card>
