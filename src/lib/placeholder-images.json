@@ -9,7 +9,7 @@
     {
       "id": "about-community",
       "description": "A modern co-working space with developers collaborating on AI and cloud projects.",
-      "imageUrl": "/ai_cloud_1.png",
+      "imageUrl": "https://images.unsplash.com/photo-1563461660947-507ef49e9c47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkZXZlbG9wZXJzJTIwY29sbGFib3JhdGluZ3xlbnwwfHx8fDE3NjYwNTU3NjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "developers collaborating"
     },
     {
@@ -21,13 +21,13 @@
     {
       "id": "event-2",
       "description": "A group of people in a workshop, working on laptops and collaborating.",
-      "imageUrl": "https://images.unsplash.com/photo-1649252504196-4aca12ecc644?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3b3Jrc2hvcCUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzY1OTU5NTk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1649252504196-4aca12ecc644?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3b3Jrc2hvcCUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzY1OTU5NTk4fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "workshop collaboration"
     },
     {
       "id": "event-3",
       "description": "A person coding on a laptop with a complex algorithm on the screen.",
-      "imageUrl": "https://images.unsplash.com/photo-1763568258235-f40425a94af9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhaSUyMGNvZGluZ3xlbnwwfHx8fDE3NjYwNTE3MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1763568258235-f40425a94af9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhSUyMGNvZGluZ3xlbnwwfHx8fDE3NjYwNTE3MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ai coding"
     },
     {
@@ -39,7 +39,7 @@
     {
       "id": "blog-2",
       "description": "A person working with data visualizations on a large screen.",
-      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYXRhJTIwdmlzdWFsaXphdGlvbnxlbnwwfHx8fDE3NjYwMjA5Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYXRhJTIwdmlzdWFsaXphdGlvbnxlbnwwfHx8fDE3NjYwMjA5Nzd8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "data visualization"
     },
     {
