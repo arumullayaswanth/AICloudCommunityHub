@@ -117,7 +117,7 @@ const HeroSection = () => {
             <Link href="#contact">Join the Community <ArrowRight className="ml-2 h-5 w-5" /></Link>
           </Button>
           <Button asChild size="lg" variant="outline" className="font-semibold bg-background/50 hover:bg-background/80">
-            <Link href="#what-we-do">Explore Events</Link>
+            <Link href="/events">Explore Events</Link>
           </Button>
         </div>
       </div>
@@ -255,12 +255,25 @@ const CtaSection = () => (
 );
 
 export default async function Home() {
-  const content = await generateLandingPageContent({
-    theme: "AI and Cloud technologies",
-    primaryColor: "hsl(260 90% 60%)",
-    backgroundColor: "hsl(240 10% 4%)",
-    accentColor: "hsl(300 90% 70%)",
-  });
+  let content = {
+    aboutSection: "The AI Cloud Community Hub is a global platform for developers, students, and professionals passionate about Artificial Intelligence and Cloud Computing. Our mission is to foster a collaborative environment where members can learn, build, and network to drive innovation in AI and cloud technologies.",
+    whatWeDoSection: "We offer a range of activities and resources to help our members grow. From hands-on workshops and expert-led tutorials to networking events and collaborative projects, we provide the tools and support you need to succeed in the fast-paced world of AI and cloud.",
+    membershipHighlightsSection: "By joining our community, you'll gain access to exclusive content, connect with industry experts, and collaborate with a diverse network of peers from around the world. Stay ahead of the curve, enhance your skills, and be part of the future of technology.",
+  };
+
+  try {
+    const generatedContent = await generateLandingPageContent({
+      theme: "AI and Cloud technologies",
+      primaryColor: "hsl(260 90% 60%)",
+      backgroundColor: "hsl(240 10% 4%)",
+      accentColor: "hsl(300 90% 70%)",
+    });
+    if (generatedContent) {
+      content = generatedContent;
+    }
+  } catch (error) {
+    console.error("Error generating landing page content:", error);
+  }
 
   return (
     <div className="flex flex-col min-h-screen bg-background">

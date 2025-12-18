@@ -2,15 +2,33 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "A vibrant, abstract design with flowing lines of purple and blue, evoking a sense of digital energy and innovation.",
+      "description": "An abstract, futuristic background with glowing blue and purple particles.",
       "imageUrl": "https://storage.googleapis.com/aif-static/556cc443-1577-4796-a197-f418d9a26385/original.png",
       "imageHint": "abstract futuristic"
     },
     {
       "id": "about-community",
-      "description": "A modern co-working space with developers collaborating on AI and cloud projects.",
+      "description": "A diverse group of people collaborating around a table with laptops, focusing on a project with a positive and engaging atmosphere.",
       "imageUrl": "https://storage.googleapis.com/aif-static/60f79269-58b2-4749-80d8-1095b3596765/original.png",
-      "imageHint": "developers collaborating"
+      "imageHint": "community collaboration"
+    },
+    {
+      "id": "event-1",
+      "description": "A speaker on stage at a tech conference, presenting to an engaged audience.",
+      "imageUrl": "https://images.unsplash.com/photo-1560439514-4e9645039924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0ZWNoJTIwY29uZmVyZW5jZXxlbnwwfHx8fDE3NjYwNTA5ODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tech conference"
+    },
+    {
+      "id": "event-2",
+      "description": "A group of people in a workshop, working on laptops and collaborating.",
+      "imageUrl": "https://picsum.photos/seed/event2/600/400",
+      "imageHint": "workshop collaboration"
+    },
+    {
+      "id": "event-3",
+      "description": "A person coding on a laptop with a complex algorithm on the screen.",
+      "imageUrl": "https://picsum.photos/seed/event3/600/400",
+      "imageHint": "ai coding"
     }
   ]
 }
