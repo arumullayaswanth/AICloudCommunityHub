@@ -28,6 +28,13 @@ const LandingPageContentOutputSchema = z.object({
 export type LandingPageContentOutput = z.infer<typeof LandingPageContentOutputSchema>;
 
 export async function generateLandingPageContent(input: LandingPageContentInput): Promise<LandingPageContentOutput> {
+  if (!process.env.GEMINI_API_KEY) {
+    return {
+      aboutSection: "The AI Cloud Community Hub is a global platform for developers, students, and professionals passionate about Artificial Intelligence and Cloud Computing. Our mission is to foster a collaborative environment where members can learn, build, and network to drive innovation in AI and cloud technologies.",
+      whatWeDoSection: "We offer a range of activities and resources to help our members grow. From hands-on workshops and expert-led tutorials to networking events and collaborative projects, we provide the tools and support you need to succeed in the fast-paced world of AI and cloud.",
+      membershipHighlightsSection: "By joining our community, you'll gain access to exclusive content, connect with industry experts, and collaborate with a diverse network of peers from around the world. Stay ahead of the curve, enhance your skills, and be part of the future of technology.",
+    };
+  }
   return generateLandingPageContentFlow(input);
 }
 
@@ -75,13 +82,6 @@ const generateLandingPageContentFlow = ai.defineFlow(
     outputSchema: LandingPageContentOutputSchema,
   },
   async input => {
-    if (!process.env.GEMINI_API_KEY) {
-      return {
-        aboutSection: "The AI Cloud Community Hub is a global platform for developers, students, and professionals passionate about Artificial Intelligence and Cloud Computing. Our mission is to foster a collaborative environment where members can learn, build, and network to drive innovation in AI and cloud technologies.",
-        whatWeDoSection: "We offer a range of activities and resources to help our members grow. From hands-on workshops and expert-led tutorials to networking events and collaborative projects, we provide the tools and support you need to succeed in the fast-paced world of AI and cloud.",
-        membershipHighlightsSection: "By joining our community, you'll gain access to exclusive content, connect with industry experts, and collaborate with a diverse network of peers from around the world. Stay ahead of the curve, enhance your skills, and be part of the future of technology.",
-      };
-    }
     const {output} = await prompt(input);
     return output!;
   }
