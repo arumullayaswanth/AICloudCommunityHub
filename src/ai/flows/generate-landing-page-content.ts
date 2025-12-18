@@ -9,6 +9,7 @@
  */
 
 import {ai} from '@/ai/genkit';
+import {googleAI} from '@genkit-ai/google-genai';
 import {z} from 'genkit';
 
 const LandingPageContentInputSchema = z.object({
@@ -34,7 +35,7 @@ const prompt = ai.definePrompt({
   name: 'generateLandingPageContentPrompt',
   input: {schema: LandingPageContentInputSchema},
   output: {schema: LandingPageContentOutputSchema},
-  model: 'gemini-1.5-flash',
+  model: googleAI('gemini-1.5-flash'),
   prompt: `You are an expert content writer for community landing pages.
 
 You will generate content for three sections of the landing page: About, What We Do, and Why Join.
@@ -74,6 +75,13 @@ const generateLandingPageContentFlow = ai.defineFlow(
     outputSchema: LandingPageContentOutputSchema,
   },
   async input => {
+    if (!process.env.GEMINI_API_KEY) {
+      return {
+        aboutSection: "The AI Cloud Community Hub is a global platform for developers, students, and professionals passionate about Artificial Intelligence and Cloud Computing. Our mission is to foster a collaborative environment where members can learn, build, and network to drive innovation in AI and cloud technologies.",
+        whatWeDoSection: "We offer a range of activities and resources to help our members grow. From hands-on workshops and expert-led tutorials to networking events and collaborative projects, we provide the tools and support you need to succeed in the fast-paced world of AI and cloud.",
+        membershipHighlightsSection: "By joining our community, you'll gain access to exclusive content, connect with industry experts, and collaborate with a diverse network of peers from around the world. Stay ahead of the curve, enhance your skills, and be part of the future of technology.",
+      };
+    }
     const {output} = await prompt(input);
     return output!;
   }
